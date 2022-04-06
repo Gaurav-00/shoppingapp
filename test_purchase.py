@@ -4,10 +4,10 @@ import pytest
 
 
 @pytest.fixture()
-def setUp():
+def setUp():    #setup will run before testcase like constructor
     print("Setup started")
     # teardown fiunction working in pytest
-    yield
+    yield      #it is like destructor it runs after testcases
     print("exited")
 
 def test_AddItemtoCart(setUp):
