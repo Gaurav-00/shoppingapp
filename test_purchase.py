@@ -5,10 +5,11 @@ import pytest
 
 @pytest.fixture()
 def setUp():    #setup will run before testcase like constructor
-    print("Setup started")
-    # teardown fiunction working in pytest
+    # print("Setup started")
+    print("user logged in.")
+    #teardown function working in pytest
     yield      #it is like destructor it runs after testcases
-    print("exited")
+    print("user logged out.")
 
 def test_AddItemtoCart(setUp):
     print("Add item successfully")
