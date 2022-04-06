@@ -1,17 +1,8 @@
-import pytest
 
-@pytest.fixture()
-def setUp():
-    print("Open my amazon app")
-    print("user logged in.")
-    # teardown function working in pytest
-    yield  # it is like destructor it runs after testcases
-    print("user logged out.")
-    print("Close amazon app")
 
-def test_PlaceOrder(setUp):
+def test_PlaceOrder():
     print("Placig Order")
-def test_MakePayments(setUp):
+def test_MakePayments():
     print("Do the Payment")
-def test_OrderConfirm(setUp):
+def test_OrderConfirm():
     print("Order Confirmed")
